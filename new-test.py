@@ -4,19 +4,19 @@ import streamlit as st
 
 
 #CSV files of different kinfd of songs from Spotify 
-aarti = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify Aarti.csv')
-navratri = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify Navratri_songs.csv')
-devotional = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify---devotional song.csv')
-assame = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify_Assamese_music.csv')
-bengali = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify_Bengali_music.csv')
-bhojpuri = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify_Bhojpuri_music.csv')
-english = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify_English_music.csv')
-malyalam = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify_Malyalam_music.csv')
-marathi = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify_Marathi_music.csv')
-#hindi = pd.read_csv('data/spotify_musicdev.csv')
-#hindi2 = pd.read_csv('data/spotify_musicdev2.csv')
-rajasthani = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify_Rajasthani_music.csv')
-telugu = pd.read_csv(r'C:\Users\Shri Ganesha\Documents\Project\spotify_Telugu_music.csv')
+aarti = pd.read_csv('spotify Aarti.csv')
+navratri = pd.read_csv('spotify Navratri_songs.csv')
+devotional = pd.read_csv('spotify---devotional song.csv')
+assame = pd.read_csv('spotify_Assamese_music.csv')
+bengali = pd.read_csv('spotify_Bengali_music.csv')
+bhojpuri = pd.read_csv('spotify_Bhojpuri_music.csv')
+english = pd.read_csv('spotify_English_music.csv')
+malyalam = pd.read_csv('spotify_Malyalam_music.csv')
+marathi = pd.read_csv('spotify_Marathi_music.csv')
+#hindi = pd.read_csv('spotify_musicdev.csv')
+#hindi2 = pd.read_csv('spotify_musicdev2.csv')
+rajasthani = pd.read_csv('spotify_Rajasthani_music.csv')
+telugu = pd.read_csv('spotify_Telugu_music.csv')
 
 #code starting 
 def main():
@@ -87,7 +87,7 @@ def main():
         st.text('Selected Navratri Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_navratri)
+        song = st.selectbox("Select the song",final_navratri.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
 
@@ -118,7 +118,7 @@ def main():
         st.text('Selected Devotional Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_devotional)
+        song = st.selectbox("Select the song",final_devotional.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
     elif choice == "Assame":
@@ -148,7 +148,7 @@ def main():
         st.text('Selected Assame Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_assame)
+        song = st.selectbox("Select the song",final_assame.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
 
@@ -179,7 +179,7 @@ def main():
         st.text('Selected Bengali Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_bengali)
+        song = st.selectbox("Select the song",final_bengali.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
     elif choice == "Bhojpuri":
@@ -209,7 +209,7 @@ def main():
         st.text('Selected Bhojpuri Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_bhojpuri)
+        song = st.selectbox("Select the song",final_bhojpuri.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
 
@@ -240,7 +240,7 @@ def main():
         st.text('Selected English Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_english)
+        song = st.selectbox("Select the song",final_english.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
 
@@ -271,7 +271,7 @@ def main():
         st.text('Selected Malyalam Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_malyalam)
+        song = st.selectbox("Select the song",final_malyalam.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
 
@@ -302,7 +302,7 @@ def main():
         st.text('Selected Marathi Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_marathi)
+        song = st.selectbox("Select the song",final_marathi.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
 
@@ -393,7 +393,7 @@ def main():
         st.text('Selected Rajasthani Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_rajasthani)
+        song = st.selectbox("Select the song",final_rajasthani.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
 
@@ -424,7 +424,7 @@ def main():
         st.text('Selected Telugu Song Is')
         st.write(selected_song_name)
         st.text('Top Popular songs are ')
-        song = st.selectbox("Select the song",final_telugu)
+        song = st.selectbox("Select the song",final_telugu.index)
         webbrowser.open('https://open.spotify.com/search/'+str(song))
 
 
