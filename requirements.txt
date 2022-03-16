@@ -1,4 +1,3 @@
-pip install --upgrade pip
 pandas>=0.19
 streamlit>=1.5.1
-webbrowser
+webbrowser >= 3.0.5
