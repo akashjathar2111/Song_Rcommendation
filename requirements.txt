@@ -1,2 +1,3 @@
 pandas>=0.19
 streamlit>=1.5.1
+webbrowser
